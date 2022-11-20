@@ -631,6 +631,6 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="body_entered" from="TheI/TheI" to="PantsManBlue" method="_on_TheI_body_entered"]
-[connection signal="body_entered" from="TheI/TheI" to="PantsManGreen" method="_on_TheI_body_entered"]
 [connection signal="body_entered" from="TheI/TheI" to="PantsManRed" method="_on_TheI_body_entered"]
+[connection signal="body_entered" from="TheI/TheI" to="PantsManGreen" method="_on_TheI_body_entered"]
+[connection signal="body_entered" from="TheI/TheI" to="PantsManBlue" method="_on_TheI_body_entered"]

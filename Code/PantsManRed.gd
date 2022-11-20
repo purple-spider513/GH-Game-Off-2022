@@ -5,6 +5,7 @@ var velocity = Vector2(0, 0)
 var moving = false
 var candoublejump = true
 var iscurrentpantsman = false
+var nextlevel = load("res://Scenes/Individual/Level2.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -64,4 +65,4 @@ func _physics_process(delta):
 
 
 func _on_TheI_body_entered(body):
-	pass # Replace with function body.
+	get_tree().get_root().add_child(nextlevel)
