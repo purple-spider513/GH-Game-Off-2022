@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Code/PantsManRed.gd" type="Script" id=1]
 [ext_resource path="res://Code/PantsManBlue.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Assets/I.png" type="Texture" id=9]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Lazy Spring Day - OTF.otf" type="DynamicFontData" id=11]
+[ext_resource path="res://Code/Level2.gd" type="Script" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -521,6 +522,7 @@ size = 78
 font_data = ExtResource( 11 )
 
 [node name="Main" type="Node2D"]
+script = ExtResource( 12 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -351.0
@@ -598,7 +600,7 @@ anims/RedMove = SubResource( 24 )
 [node name="HUD" parent="." instance=ExtResource( 10 )]
 
 [node name="TheI" type="StaticBody2D" parent="."]
-position = Vector2( 311, -136 )
+position = Vector2( 296, -152 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TheI"]
 shape = SubResource( 25 )

@@ -13,7 +13,7 @@ func _ready():
 
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	iscurrentpantsman = Global.current_index == 2
 	if(iscurrentpantsman):
 		$Camera2D.current = true
@@ -57,13 +57,17 @@ func _physics_process(delta):
 	if(velocity.x < 0):
 		velocity.x += 1
 	
-	move_and_slide(velocity, Vector2(0, -1))
+	velocity = move_and_slide(velocity, Vector2(0, -1))
 	if(moving):
 		$AnimationPlayer.play("RedMove")
 	else:
 		$AnimationPlayer.play("Idle")
 
 
-#func _on_TheI_body_entered(body):
-#	get_tree().get_root().add_child(nextlevel)
-
+func _on_TheI_body_entered(body):
+	if(body.name == "PantsManBlue"):
+		if(Global.current_level == "Level2"):
+			get_tree().change_scene("res://Scenes/Individual/Finishgame.tscn")
+		if(Global.current_level == "Tutorial"):
+			get_tree().change_scene("res://Scenes/Individual/Level2.tscn")
+			Global.current_level = "Level2"
