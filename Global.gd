@@ -3,7 +3,7 @@ extends Node
 var pantsmeninorder = ["Red", "Green", "Blue"]
 var current_pantsman = "Red"
 var current_index = 0
-
+var current_level = "Menu"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

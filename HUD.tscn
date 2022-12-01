@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/PlayerSignRed.png" type="Texture" id=1]
 [ext_resource path="res://Assets/PlayerSignGreen.png" type="Texture" id=2]
 [ext_resource path="res://Assets/PlayerSignBlue.png" type="Texture" id=3]
-[ext_resource path="res://HUD.gd" type="Script" id=4]
+[ext_resource path="res://Code/HUD.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "BluePantsMan"

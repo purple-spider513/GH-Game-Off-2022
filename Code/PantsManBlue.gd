@@ -19,7 +19,7 @@ func _physics_process(delta):
 		$Camera2D.current = true
 	else:
 		$Camera2D.current = false
-	if(position.y >= 50):
+	if(position.y >= 100):
 		position.x = 0
 		position.y = 0
 	if(is_on_floor()):
@@ -64,6 +64,6 @@ func _physics_process(delta):
 		$AnimationPlayer.play("Idle")
 
 
-func _on_TheI_body_entered(body):
-	get_tree().get_root().add_child(nextlevel)
+#func _on_TheI_body_entered(body):
+#	get_tree().get_root().add_child(nextlevel)
 

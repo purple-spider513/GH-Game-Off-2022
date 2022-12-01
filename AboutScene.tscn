@@ -1,0 +1,237 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Assets/Lazy Spring Day - OTF.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/purple_spider2.jpeg" type="Texture" id=2]
+[ext_resource path="res://Assets/GreenPantsMan-Sheet.png" type="Texture" id=3]
+[ext_resource path="res://Assets/RedPantsMan-Sheet.png" type="Texture" id=4]
+[ext_resource path="res://Assets/BluePantsMan-Sheet.png" type="Texture" id=5]
+[ext_resource path="res://Assets/BluePantsManJump.png" type="Texture" id=6]
+[ext_resource path="res://Code/purplespiderlogo.gd" type="Script" id=7]
+[ext_resource path="res://Assets/100happeepfp.png" type="Texture" id=8]
+[ext_resource path="res://Code/My YT Channel.gd" type="Script" id=9]
+[ext_resource path="res://Code/100happee's YT Channel.gd" type="Script" id=10]
+[ext_resource path="res://Code/100happeelogo.gd" type="Script" id=11]
+[ext_resource path="res://Code/Pants Man 2.gd" type="Script" id=12]
+[ext_resource path="res://Code/TheCode.gd" type="Script" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "PantsMen"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("RedPantsMan1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("RedPantsMan2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BluePantsMan2:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 3, 0, 1 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("RedPantsMan1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("RedPantsMan2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BluePantsMan2:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2 ]
+}
+
+[node name="AboutScene" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 160.0
+margin_bottom = 160.0
+color = Color( 0, 0.439216, 1, 1 )
+
+[node name="MainLabel" type="Label" parent="."]
+margin_left = 30.0
+margin_top = 4.0
+margin_right = 299.0
+margin_bottom = 154.0
+rect_scale = Vector2( 0.380336, 0.380336 )
+custom_fonts/font = SubResource( 1 )
+text = "About"
+
+[node name="Body" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 48.0
+margin_right = 1891.0
+margin_bottom = 810.0
+rect_scale = Vector2( 0.074705, 0.074705 )
+custom_fonts/font = SubResource( 2 )
+text = "Dude stack is a game made for the 2022
+GitHub Game Off Game Jam. The Pants
+Men are all inspired by my friend 100happee's
+video \"Pants Man 2\". The code is available at
+my GitHub Repo:"
+
+[node name="TheCode" type="Button" parent="."]
+margin_left = 27.0
+margin_top = 105.0
+margin_right = 447.0
+margin_bottom = 261.0
+rect_scale = Vector2( 0.102386, 0.102386 )
+custom_fonts/font = SubResource( 3 )
+text = "The Code"
+script = ExtResource( 13 )
+
+[node name="My YT Channel" type="Button" parent="."]
+margin_left = 26.0
+margin_top = 149.0
+margin_right = 425.0
+margin_bottom = 246.0
+rect_scale = Vector2( 0.102386, 0.102386 )
+custom_fonts/font = SubResource( 4 )
+text = "My YT Channel"
+script = ExtResource( 9 )
+
+[node name="100happee\'s YT Channel" type="Button" parent="."]
+margin_left = 69.0
+margin_top = 149.0
+margin_right = 708.0
+margin_bottom = 246.0
+rect_scale = Vector2( 0.102386, 0.102386 )
+custom_fonts/font = SubResource( 4 )
+text = "100happee's YT Channel"
+script = ExtResource( 10 )
+
+[node name="Pants Man 2" type="Button" parent="."]
+margin_left = 74.0
+margin_top = 105.0
+margin_right = 615.0
+margin_bottom = 261.0
+rect_scale = Vector2( 0.102386, 0.102386 )
+custom_fonts/font = SubResource( 3 )
+text = "Pants Man 2"
+script = ExtResource( 12 )
+
+[node name="purplespiderlogo" type="TextureButton" parent="."]
+margin_left = 9.53674e-07
+margin_top = 135.0
+margin_right = 500.0
+margin_bottom = 635.0
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 2 )
+script = ExtResource( 7 )
+
+[node name="100happeelogo" type="TextureButton" parent="."]
+margin_left = 135.0
+margin_top = 135.0
+margin_right = 635.0
+margin_bottom = 635.0
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 8 )
+expand = true
+script = ExtResource( 11 )
+
+[node name="RedPantsMan1" type="Sprite" parent="."]
+position = Vector2( 102, 129 )
+rotation = 3.14159
+texture = ExtResource( 4 )
+hframes = 4
+
+[node name="BluePantsMan1" type="Sprite" parent="."]
+position = Vector2( 149, 128 )
+texture = ExtResource( 6 )
+
+[node name="GreenPantsMan1" type="Sprite" parent="."]
+position = Vector2( 149, 114 )
+texture = ExtResource( 3 )
+hframes = 4
+
+[node name="RedPantsMan2" type="Sprite" parent="."]
+position = Vector2( 19, 113 )
+rotation = -1.5708
+texture = ExtResource( 4 )
+hframes = 4
+
+[node name="BluePantsMan2" type="Sprite" parent="."]
+position = Vector2( 72, 97 )
+texture = ExtResource( 5 )
+hframes = 4
+frame = 2
+
+[node name="GreenPantsMan2" type="Sprite" parent="."]
+position = Vector2( 10, 8 )
+rotation = 3.14159
+texture = ExtResource( 3 )
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "PantsMen"
+anims/PantsMen = SubResource( 5 )
+anims/RESET = SubResource( 6 )
